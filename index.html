@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+
+    <title>Vacaciones IPR</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      function mostrarOcultar(e) {
+        if (e.value === "Informáticos") {
+          document.getElementById("informaticos").style.display = "block";
+        } else {
+          document.getElementById("informaticos").style.display = "none";
+        }
+        {
+          if (e.value === "Administrativos") {
+            document.getElementById("administrativos").style.display = "block";
+          } else {
+            document.getElementById("administrativos").style.display = "none";
+          }
+        }
+        {
+          if (e.value === "Clínica") {
+            document.getElementById("clinica").style.display = "block";
+          } else {
+            document.getElementById("clinica").style.display = "none";
+          }
+        }
+      }
+    </script>
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a
+        class="btn-link"
+        style="text-decoration: none"
+        href="index.html"
+        id="userDropdown"
+        role="button"
+        data-toggle="#"
+        aria-haspopup="true"
+        aria-expanded="true"
+      >
+        <img
+          src="img/iprpng.png"
+          width="100"
+          height="50"
+          style="margin-left: 25px; margin-bottom: 10px; margin-top: 10px"
+        />
+      </a>
+      <!-- Nav Item - User Information -->
+      <li class="nav-link dropdown list-unstyled">
+        <a
+          class="btn-outline-none dropdown text-white"
+          style="text-decoration: none"
+          href="#"
+          id="userDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fas fa-user"></i>
+          <span class="mr-5 d-lg-inline text-white">
+            &nbsp;&nbsp;&nbsp;&nbsp;Daniel López</span
+          >
+        </a>
+
+        <!-- Dropdown - User Information -->
+        <div
+          class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+          aria-labelledby="userDropdown"
+        >
+          <a class="dropdown-item" href="#">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+            Perfil
+          </a>
+          <a class="dropdown-item" href="#">
+            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+            Configuración
+          </a>
+          <a class="dropdown-item" href="#">
+            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+            Correo
+          </a>
+          <div class="dropdown-divider"></div>
+          <a
+            class="dropdown-item"
+            href="#"
+            data-toggle="modal"
+            data-target="#logoutModal"
+          >
+            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+            Logout
+          </a>
+        </div>
+      </li>
+    </nav>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              ¿Quieres cerrar la sesión actual?
+            </h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Selecciona Cerrar sesión si quieres salir.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <a
+              class="btn btn-primary"
+              href="http://usuarios.iprprevencion.es/login.php"
+              >Cerrar Sesión</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Sidebar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          class="col-md-1 d-none d-md-block bg-secondary sidebar"
+          style="position: fixed; margin-top: 70px; text-align: justify"
+        >
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <br />
+
+              <li class="list-unstyled border-0">
+                <a
+                  class="list-group-item bg-secondary text-white border-0"
+                  href="#"
+                >
+                  <i class="fas fa-check"></i>
+                  <span data-feather="home"></span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Vacaciones
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <p></p>
+
+              <li class="list-unstyled">
+                <a
+                  class="list-group-item bg-secondary text-white border-0"
+                  href="#"
+                >
+                  <i class="fas fa-arrow-alt-circle-right"></i>
+                  <span data-feather="file"></span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Próximas Vacaciones
+                </a>
+              </li>
+              <p></p>
+
+              <li class="list-unstyled">
+                <a
+                  class="list-group-item bg-secondary text-white border-0"
+                  href="#"
+                >
+                  <i class="fas fa-calendar"></i>
+                  <span data-feather="shopping-cart"></span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Calendario
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End of sidebar -->
+
+        <!-- Main Content -->
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-11 pt-3 px-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3"
+          >
+            <h1 class="h2">Personal disponible</h1>
+          </div>
+          <div>
+            <select
+              class="form-control form-control-lg col-xl-12 col-lg-7 col-auto"
+              id="Departamento"
+              onchange="mostrarOcultar(this);"
+            >
+              <option>Administrativos</option>
+              <option>Informáticos</option>
+              <option>Clínica</option>
+            </select>
+            <p></p>
+
+            <select
+              class="form-control col-xl-12 col-lg-7 col-auto"
+              id="informaticos"
+              style="display: none"
+            >
+              <option>Daniel</option>
+              <option>Miguel</option>
+              <option>Diego</option>
+              <option>Carlos</option>
+              <option>Ivan</option>
+            </select>
+
+            <select
+              class="form-control col-xl-12 col-lg-7 col-auto"
+              id="administrativos"
+              style="display: none"
+            >
+              <option>Conso</option>
+              <option>Beatriz</option>
+              <option>Cynthia</option>
+              <option>Monica</option>
+              <option>Cristina</option>
+            </select>
+
+            <select
+              class="form-control col-xl-12 col-lg-7 col-auto"
+              id="clinica"
+              style="display: none"
+            >
+              <option>Patricia</option>
+              <option>Nerea</option>
+              <option>Nieves</option>
+              <option>Javi</option>
+              <option>Rebeca</option>
+              <option>Diana</option>
+              <option>Marwa</option>
+              <option>Marta</option>
+            </select>
+          </div>
+          <br /><br /><br />
+
+          <!-- Calendar -->
+          <div class="row">
+            <div class="col-md-6 col-lg-12 col-sm-auto">
+              <div class="col-md-4 offset-md-4"></div>
+              <h1 class="h2">Seleccionar fechas</h1>
+              <form>
+                <div id="demo-inline"></div>
+                <script>
+                  mobiscroll.setOptions({
+                    locale: mobiscroll.localeEs,
+                    theme: "ios",
+                    themeVariant: "light",
+                  });
+
+                  mobiscroll.datepicker("#demo-inline", {
+                    controls: ["calendar"],
+                    select: "range",
+                    display: "inline",
+                  });
+                </script>
+                <p></p>
+                <button type="submit" class="btn btn-secondary">Enviar</button>
+              </form>
+              <hr />
+
+              <div class="container-fluid">
+                <div class="col-lg-12 col-md-6 col-sm-auto">
+                  <h2 class="h2">Listado de Vacaciones</h2>
+                  <script>
+                    document.getElementById("datepicker").innerHTML;
+                  </script>
+                </div>
+              </div>
+
+              <!-- End of content-->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
